@@ -102,12 +102,12 @@ export default class PetFinderSearch extends Component {
   render() {
     return (
       <div>
-        <h1>Adopt Your Own Cat Today!</h1>
+        <h1>Adopt A Cat Today!</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="location"
-            placeholder="City or Zip Code"
+            placeholder="Enter your zip code"
             onChange={this.handleLocation}
           />
           <button type="submit">Search</button>

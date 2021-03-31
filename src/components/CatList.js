@@ -72,7 +72,8 @@ class Cat extends Component {
         <h1>Cat Breeds</h1>
 
         <label>
-          Search by breed, temperament, general keywords
+          Search the different cat breeds by name or keyword.
+          <br />
           <br />
           <input
             onChange={this.search}
@@ -82,7 +83,7 @@ class Cat extends Component {
           />
         </label>
 
-        <div className="cat-grid">{this.allCats()}</div>
+        <p className="cat-grid">{this.allCats()}</p>
       </>
     );
   }
