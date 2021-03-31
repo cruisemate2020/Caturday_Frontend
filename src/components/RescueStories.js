@@ -18,16 +18,22 @@ class RescueStories extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:5000/api/rescue-story").then((response) => {
-      this.setState({
-        listOfStories: response.data,
+    console.log("component mounting", process.env.REACT_APP_SERVER_URL);
+    axios
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`)
+      .then((response) => {
+        console.log({ response });
+        this.setState({
+          listOfStories: response.data,
+        });
       });
-    });
   }
 
   deleteStory = (id) => {
     axios
-      .delete(`http://localhost:5000/api/rescue-story/delete/${id}`)
+      .delete(
+        `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
+      )
       .then(() => {
         console.log("deleted frontend");
       })
@@ -59,9 +65,13 @@ class RescueStories extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/api/rescue-story", this.state, {
-      withCredentials: true,
-    });
+    axios.post(
+      `${process.env.REACT_APP_SERVER_URL}/api/rescue-story`,
+      this.state,
+      {
+        withCredentials: true,
+      }
+    );
     this.props.history.push("/");
   };
 

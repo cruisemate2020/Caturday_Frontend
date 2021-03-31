@@ -22,6 +22,7 @@ class Cat extends Component {
             `https://api.thecatapi.com/v1/images/search?breed_id=${this.props.match.params.id}`
           )
           .then((response) => {
+            console.log({ response });
             this.setState({
               image: response.data[0].url,
             });

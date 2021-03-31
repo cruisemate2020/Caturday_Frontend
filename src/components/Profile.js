@@ -23,7 +23,7 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:5000/api/rescue-story").then((response) => {
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`).then((response) => {
       this.setState({
         listOfUserStories: response.data,
         loggedInUser: this.props.userInSession
@@ -33,7 +33,7 @@ class Profile extends Component {
     });
 
     axios
-      .get(`http://localhost:5000/api/profile/${this.props.match.params.id}`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/profile/${this.props.match.params.id}`)
       .then((userRes) => {
         this.setState({
           username: userRes.data.username,
@@ -77,7 +77,7 @@ class Profile extends Component {
 
   deleteStory = (id) => {
     axios
-      .delete(`http://localhost:5000/api/rescue-story/delete/${id}`)
+      .delete(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`)
       .then(() => {
         console.log("deleted frontend");
       })
@@ -92,7 +92,7 @@ class Profile extends Component {
     const story = this.state.editedStory;
 
     axios
-      .put(`http://localhost:5000/api/rescue-story/edit/${id}`, {
+      .put(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story/edit/${id}`, {
         name,
         breed,
         age,
@@ -111,7 +111,7 @@ class Profile extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios.put(
-      `http://localhost:5000/api/edit-user/${this.props.match.params.id}`,
+      `${process.env.REACT_APP_SERVER_URL}/api/edit-user/${this.props.match.params.id}`,
       this.state,
       {
         withCredentials: true,

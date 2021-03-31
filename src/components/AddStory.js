@@ -15,23 +15,32 @@ export default class AddStory extends Component {
   componentWillReceiveProps(nextProps) {
     this.setState({ ...this.state, loggedInUser: nextProps["userInSession"] });
     console.log(this.state.loggedInUser);
-  }
-
-  componentDidMount() {
     this.setState({
       loggedInUser: this.props.userInSession ? this.props.userInSession : null,
     });
-
-    console.log(this.state);
   }
+
+  // componentDidMount() {
+  //   this.setState({
+  //     loggedInUser: this.props.userInSession ? this.props.userInSession : null,
+  //   });
+
+  //   console.log(this.state);
+  // }
 
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log({ theState: this.state });
     axios
-      .post("http://localhost:5000/api/rescue-story", this.state, {
-        withCredentials: true,
-      })
-      .then(() => {
+      .post(
+        `${process.env.REACT_APP_SERVER_URL}/api/rescue-story`,
+        this.state,
+        {
+          withCredentials: true,
+        }
+      )
+      .then((res) => {
+        console.log({ storyres: res.data });
         this.props.history.push("/rescueStories");
       })
       .catch((err) => {
@@ -41,10 +50,12 @@ export default class AddStory extends Component {
 
   handleFileUpload = (e) => {
     const uploadData = new FormData();
+    console.log({ thefile: e });
     uploadData.append("imageUrl", e.target.files[0]);
     service
       .handleUpload(uploadData)
       .then((response) => {
+        console.log({ responsefile: response });
         this.setState({ imageUrl: response.secure_url });
       })
       .catch((err) => {
@@ -59,9 +70,7 @@ export default class AddStory extends Component {
   render() {
     return (
       <div>
-                <h1>
-Add Your Cat's Story
-          </h1>
+        <h1>Add Your Cat's Story</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
