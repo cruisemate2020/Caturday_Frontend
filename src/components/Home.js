@@ -14,9 +14,7 @@ class Home extends Component {
     return (
       <div className="content">
         <h1>Every Day is Caturday</h1>
-        <div className="content">
           <CarouselComponent />
-        </div>
         <p className="content-text">
           Studies have shown that cats have a calming effect on their owners,
           from the soothing action of petting to purring being an aid in falling

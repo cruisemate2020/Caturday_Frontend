@@ -60,7 +60,7 @@ class App extends Component {
             <img src="../images/catIcon.png" alt="cat-icon" />
             <Link to="/">Home</Link>
             <Link to="/cat-list">Cat Breeds</Link>
-            <Link to="/rescueStories">RescueStories</Link>
+            <Link to="/rescueStories">Rescue Stories</Link>
             <Link to="/addstory">Add Story</Link>
             <Link to={`/profile/${this.state.loggedInUser._id}`}>Profile</Link>
             <Link to="/">
@@ -149,8 +149,8 @@ class App extends Component {
           <nav>
             <img src="./images/catIcon.png" alt="catLogo" />
             <Link to="/">Home</Link>
-            <Link to="/cat-list">Cats</Link>
-            <Link to="/rescueStories">RescueStories</Link>
+            <Link to="/cat-list">Cat Breeds</Link>
+            <Link to="/rescueStories">Rescue Stories</Link>
             <Link to="/login">Login/Signup</Link>
           </nav>
           <Switch>

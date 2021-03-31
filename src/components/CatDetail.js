@@ -45,61 +45,62 @@ class CatDetail extends Component {
   render() {
     const hypoallergenic = this.state.hypoallergenic;
     return (
-      <div>
+      <div className="content">
         <h1>About {this.state.catDetails.name} Cats</h1>
         <img className="cat-img" src={this.state.image} alt="unavailable" />
-        <p>{this.state.catDetails.name}</p>
-        <p>{this.state.catDetails.description}</p>
-        <p>
-          <span className="attributes">Temperament:</span>{" "}
-          {this.state.catDetails.temperament}
-        </p>
-        <p>
-          <span className="attributes">Hypoallergenic:</span>{" "}
-          {hypoallergenic ? "Yes" : "No"}
-        </p>
-        <p>
-          <span className="attributes">Affection Level:</span>{" "}
-          {this.colorRatings(this.state.catDetails.affection_level).map(
-            (x, index) => x
-          )}
-        </p>
-        <p>
-          <span className="attributes">Energy Level:</span>
-          {this.colorRatings(this.state.catDetails.energy_level).map(
-            (x, index) => x
-          )}
-        </p>
-        <p>
-          <span className="attributes">Child Friendly:</span>{" "}
-          {this.colorRatings(this.state.catDetails.child_friendly).map(
-            (x, index) => x
-          )}
-        </p>
-        <p>
-          <span className="attributes">Dog Friendly:</span>{" "}
-          {this.colorRatings(this.state.catDetails.dog_friendly).map(
-            (x, index) => x
-          )}
-        </p>
-        <p>
-          <span className="attributes">Stranger Friendly:</span>{" "}
-          {this.colorRatings(this.state.catDetails.stranger_friendly).map(
-            (x, index) => x
-          )}
-        </p>
-        <p>
-          You can find additional information on {this.state.catDetails.name}{" "}
-          cats{" "}
-          <a
-            href={this.state.catDetails.wikipedia_url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            here
-          </a>
-          .
-        </p>
+        <div className="content-text">
+          <p>{this.state.catDetails.description}</p>
+          <p>
+            <span className="attributes">Temperament:</span>{" "}
+            {this.state.catDetails.temperament}
+          </p>
+          <p>
+            <span className="attributes">Hypoallergenic:</span>{" "}
+            {hypoallergenic ? "Yes" : "No"}
+          </p>
+          <p>
+            <span className="attributes">Affection Level:</span>{" "}
+            {this.colorRatings(this.state.catDetails.affection_level).map(
+              (x, index) => x
+            )}
+          </p>
+          <p>
+            <span className="attributes">Energy Level:</span>
+            {this.colorRatings(this.state.catDetails.energy_level).map(
+              (x, index) => x
+            )}
+          </p>
+          <p>
+            <span className="attributes">Child Friendly:</span>{" "}
+            {this.colorRatings(this.state.catDetails.child_friendly).map(
+              (x, index) => x
+            )}
+          </p>
+          <p>
+            <span className="attributes">Dog Friendly:</span>{" "}
+            {this.colorRatings(this.state.catDetails.dog_friendly).map(
+              (x, index) => x
+            )}
+          </p>
+          <p>
+            <span className="attributes">Stranger Friendly:</span>{" "}
+            {this.colorRatings(this.state.catDetails.stranger_friendly).map(
+              (x, index) => x
+            )}
+          </p>
+          <p>
+            You can find additional information on {this.state.catDetails.name}{" "}
+            cats{" "}
+            <a
+              href={this.state.catDetails.wikipedia_url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            .
+          </p>
+        </div>
       </div>
     );
   }
