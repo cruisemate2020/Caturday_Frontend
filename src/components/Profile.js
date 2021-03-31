@@ -23,17 +23,21 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    axios.get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`).then((response) => {
-      this.setState({
-        listOfUserStories: response.data,
-        loggedInUser: this.props.userInSession
-          ? this.props.userInSession
-          : null,
+    axios
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`)
+      .then((response) => {
+        this.setState({
+          listOfUserStories: response.data,
+          loggedInUser: this.props.userInSession
+            ? this.props.userInSession
+            : null,
+        });
       });
-    });
 
     axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/api/profile/${this.props.match.params.id}`)
+      .get(
+        `${process.env.REACT_APP_SERVER_URL}/api/profile/${this.props.match.params.id}`
+      )
       .then((userRes) => {
         this.setState({
           username: userRes.data.username,
@@ -63,13 +67,14 @@ class Profile extends Component {
             <span className="attributes">Made by:</span>{" "}
             {eachStory.userId.username}
             <br /> <br />
-            <button onClick={() => this.deleteStory(eachStory._id)}>
-              Delete
-            </button>
-            <br />
-            <Link to={`/edit/${eachStory._id}`}>
-              <button>Edit</button>
-            </Link>
+            <div className="stories-btn">
+              <button onClick={() => this.deleteStory(eachStory._id)}>
+                Delete
+              </button>
+              <Link to={`/edit/${eachStory._id}`}>
+                <button>Edit</button>
+              </Link>
+            </div>
           </div>
         );
     });
@@ -77,7 +82,9 @@ class Profile extends Component {
 
   deleteStory = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`)
+      .delete(
+        `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
+      )
       .then(() => {
         console.log("deleted frontend");
       })
@@ -184,8 +191,6 @@ class Profile extends Component {
               type="email"
             />
           </label>
-
-          {/* <button onClick={() => window.location.reload(false)}>Update</button> */}
           <button onClick={this.hideForm}>Update</button>
         </form>
       </>
@@ -205,8 +210,8 @@ class Profile extends Component {
             <br />
             {this.state.email}
           </div>
-          {this.editProfileForm()}
-          <br />
+          <p>{this.editProfileForm()}</p>
+          <h2>{this.state.username}'s Rescue Stories</h2>
           <div className="cat-grid">{this.showAllStories()}</div>
         </div>
       );

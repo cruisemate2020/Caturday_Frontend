@@ -72,40 +72,48 @@ export default class AddStory extends Component {
       <div>
         <h1>Add Your Cat's Story</h1>
         <form onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="name"
-            placeholder="Cat's Name"
-          />
+          <p>
+            <h2>Share a story about your furbaby!</h2>
+          </p>
           <br />
-          <input
-            onChange={this.handleChange}
-            type="number"
-            name="age"
-            placeholder="Age"
-          />{" "}
-          <br />
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="breed"
-            placeholder="Breed"
-          />{" "}
-          <br />
-          <label>Tell your cat's story:</label>
-          <br />
-          <textarea
-            onChange={this.handleChange}
-            name="story"
-            cols="80"
-            rows="10"
-          ></textarea>
-          <br />
-          <label>Show off your beautiful Furbaby!</label>
-          <br />
-          <input type="file" onChange={(e) => this.handleFileUpload(e)} />
-          <button>Submit</button>
+          <label className="attributes">
+            Upload a picture:
+            <br />
+            <br />
+            <input type="file" onChange={(e) => this.handleFileUpload(e)} />
+          </label>
+          <p>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="name"
+              placeholder="Cat's Name"
+            />
+            <br />
+            <input
+              onChange={this.handleChange}
+              type="number"
+              name="age"
+              placeholder="Age"
+            />{" "}
+            <br />
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="breed"
+              placeholder="Breed"
+            />{" "}
+            <br />
+            <br />
+            <textarea
+              onChange={this.handleChange}
+              name="story"
+              cols="80"
+              rows="10"
+            ></textarea>
+            <br />
+            <button>Submit</button>
+          </p>
         </form>
       </div>
     );

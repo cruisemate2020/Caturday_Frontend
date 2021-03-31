@@ -55,6 +55,13 @@ button {
   font-size: 1.25rem;
   background-color: #6d7993;
   color: #ccc;
+  font-weight: bold;
+}
+
+.stories-btn {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 2rem 0.5rem 2rem;
 }
 
 .required {
@@ -93,7 +100,7 @@ button {
 } */
 
 h1 {
-  font-family: "Acme", sans-serif;
+  font-family: "Righteous", cursive;
   font-size: 6rem;
   color: rgb(59, 34, 1);
   margin: 0;

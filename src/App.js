@@ -57,8 +57,9 @@ class App extends Component {
       return (
         <div>
           <nav>
+            <img src="../images/catIcon.png" alt="cat-icon" />
             <Link to="/">Home</Link>
-            <Link to="/cat-list">Cats</Link>
+            <Link to="/cat-list">Cat Breeds</Link>
             <Link to="/rescueStories">RescueStories</Link>
             <Link to="/addstory">Add Story</Link>
             <Link to={`/profile/${this.state.loggedInUser._id}`}>Profile</Link>

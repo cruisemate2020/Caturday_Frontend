@@ -13,11 +13,7 @@ class Home extends Component {
   render() {
     return (
       <div className="content">
-        <h1>
-          Every Day is
-          <br />
-          Caturday
-        </h1>
+        <h1>Every Day is Caturday</h1>
         <div className="content">
           <CarouselComponent />
         </div>
