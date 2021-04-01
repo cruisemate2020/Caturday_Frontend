@@ -103,6 +103,9 @@ export default class PetFinderSearch extends Component {
     return (
       <div>
         <h1>Adopt A Cat Today!</h1>
+        <p className="notes">
+        Search will return 20 adoptable cats within 100 mile radius of your zip code.<br /><br />
+        See one you like? <br />Click on their name for additional information!</p>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -112,7 +115,7 @@ export default class PetFinderSearch extends Component {
           />
           <button type="submit">Search</button>
         </form>
-        <div className="cat-grid">{this.allAvailableRescueCats()}</div>
+        <p className="cat-grid">{this.allAvailableRescueCats()}</p>
       </div>
     );
   }
