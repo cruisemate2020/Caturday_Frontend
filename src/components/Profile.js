@@ -89,7 +89,11 @@ class Profile extends Component {
         console.log("deleted frontend");
       })
       .catch((err) => console.log(err));
-    // window.location.reload(false);
+    this.setState({
+      listOfStories: this.state.listOfStories.filter(
+        (story) => story._id !== id
+      ),
+    });
   };
 
   editStory = (id) => {
