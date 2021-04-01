@@ -66,7 +66,7 @@ class Signup extends Component {
         <h1>Sign Up</h1>
         <p className="required">Fields denoted with an '*' are required.</p>
         <form onSubmit={this.handleFormSubmit}>
-          <label>
+          <label className="attributes">
             <span className="required">* </span>
             First Name:&nbsp;&nbsp;
           </label>
@@ -77,7 +77,7 @@ class Signup extends Component {
             required
             onChange={(e) => this.handleChange(e)}
           />
-          <label> Last Name: </label>
+          <label className="attributes"> Last Name: </label>
           <input
             type="text"
             name="lastName"
@@ -86,14 +86,14 @@ class Signup extends Component {
           />
           <br />
           <br />
-          <label> Location: </label>
+          <label className="attributes"> Location: </label>
           <input
             type="text"
             name="location"
             value={this.state.location}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>
+          <label className="attributes">
             &nbsp;&nbsp;<span className="required">* </span>
             Email:&nbsp;&nbsp;
           </label>
@@ -107,9 +107,9 @@ class Signup extends Component {
           <br />
           <br />
           <p>
-            <label>Create your Login</label>
+            <label className="attributes">Create your Login</label>
           </p>
-          <label>
+          <label className="attributes">
             <span className="required">* </span>
             Username:&nbsp;&nbsp;
           </label>
@@ -121,7 +121,7 @@ class Signup extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label>
+          <label className="attributes">
             &nbsp;&nbsp;<span className="required">* </span>
             Password:&nbsp;&nbsp;
           </label>

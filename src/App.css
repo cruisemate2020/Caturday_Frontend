@@ -16,7 +16,7 @@ nav {
   align-items: center;
   padding: 5px;
   box-shadow: 2px 2px 6px 0px rgba(59, 34, 1, 0.3);
-  width: 100%;
+  max-width: 100%;
   background-color: #96858f;
   color: white;
   top: 0;
@@ -46,9 +46,7 @@ ul {
 }
 
 input {
-  /* padding: 1rem; */
-  font-size: 1.25rem;
-  /* background-color: #6d7993; */
+  font-size: 1.15rem;
 }
 
 button {
@@ -56,6 +54,7 @@ button {
   background-color: #6d7993;
   color: #ccc;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .stories-btn {
@@ -92,13 +91,6 @@ button {
   color: #232d42;
 }
 
-/* .catGrid {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-} */
-
 h1 {
   font-family: "Righteous", cursive;
   font-size: 6rem;
@@ -113,11 +105,14 @@ h2 {
   font-weight: bold;
 }
 
+input[type="text"], input[type="password"] {
+  margin: 0 1rem;
+}
+
 .cat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  /* background-color: bisque; */
 }
 
 .cats {
@@ -138,7 +133,7 @@ h2 {
 }
 .cat img {
   max-width: 100%;
-  width: "200vw"
+  width: "200vw";
 }
 .cat .text {
   padding: 0 20px 20px;
@@ -171,7 +166,6 @@ h2 {
 
 .brown-bg {
   display: inline-block;
-  /* background-image: url("paw2.png"); */
   height: 0.45rem;
   width: 2rem;
   background-color: #544439;
@@ -195,9 +189,9 @@ h2 {
   text-align: center;
 }
 
-/* .carouselImgs {
-  width: 50vh;
-} */
+.notes {
+  font-weight: bold;
+}
 
 .centerCarousel {
   display: flex;
@@ -217,4 +211,15 @@ h2 {
 
 .username {
   border: 0;
+}
+
+.update-form {
+  margin-top: 1rem;
+}
+
+.adopt {
+  font-family: "Righteous", cursive;
+  font-weight: bold;
+  font-size: 1.15em;
+  text-decoration: none;
 }

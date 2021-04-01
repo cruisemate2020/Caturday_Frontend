@@ -26,7 +26,7 @@ class Home extends Component {
           die of a heart attack or stroke than non-cat owners.
         </p>
         <h2>
-          <Link to="/petFinderSearch">Adopt a Cat Today!</Link>
+          <Link to="/petFinderSearch" className="adopt">Adopt a Cat Today!</Link>
         </h2>
       </div>
     );

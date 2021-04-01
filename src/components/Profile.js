@@ -147,6 +147,7 @@ class Profile extends Component {
     return (
       <>
         <button onClick={this.showForm}>Update personal info</button>
+        <div className="update-form">
         <form onSubmit={this.handleSubmit} hidden={this.state.hidden}>
           <label>
             Username:
@@ -198,8 +199,10 @@ class Profile extends Component {
               type="email"
             />
           </label>
-          <button onClick={this.hideForm}>Update</button>
+          <br />
+          <div className="update-form"><button onClick={this.hideForm}>Update</button></div>
         </form>
+        </div>
       </>
     );
   };

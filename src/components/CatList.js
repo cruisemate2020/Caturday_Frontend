@@ -71,7 +71,7 @@ class Cat extends Component {
       <>
         <h1>Cat Breeds</h1>
 
-        <label>
+        <label className="notes">
           Search the different cat breeds by name or keyword.
           <br />
           <br />
