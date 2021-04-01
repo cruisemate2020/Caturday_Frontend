@@ -94,6 +94,7 @@ export default class AddStory extends Component {
               onChange={this.handleChange}
               type="number"
               name="age"
+              min="0"
               placeholder="Age"
             />{" "}
             <br />

@@ -54,7 +54,18 @@ class Cat extends Component {
         <div>
           <div key={eachCat._id}>
             <div className="cat">
-              <img src={eachCat.image?.url} alt=" unavailable" width="200vw" />
+              {!eachCat.image?.url ? (
+                <img
+                  src="../images/home-is-where-the-cat-is.jpg"
+                  alt="Home is where the cat is"
+                />
+              ) : (
+                <img
+                  src={eachCat.image?.url}
+                  alt=" unavailable"
+                  width="200vw"
+                />
+              )}
               <br />
               <Link to={`/cat-detail/${eachCat.id}`}>
                 <h3>{eachCat.name}</h3>
