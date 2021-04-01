@@ -81,17 +81,18 @@ class Profile extends Component {
   };
 
   deleteStory = (id) => {
-    console.log("deleting story:", id)
+    console.log("deleting story:", id);
     axios
       .delete(
         `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
       )
-      .then(() => {
-        console.log("deleted frontend");
+      .then((res) => {
+        console.log("deleted frontend", res);
         this.setState({
-          listOfStories: !!this.state.listOfStories && this.state.listOfStories.length > 0 ? this.state.listOfStories.filter(
-            (story) => story._id !== id
-          ) : [],
+          listOfStories:
+            !!this.state.listOfStories && this.state.listOfStories.length > 0
+              ? this.state.listOfStories.filter((story) => story._id !== id)
+              : [],
         });
       })
       .catch((err) => console.log(err));
