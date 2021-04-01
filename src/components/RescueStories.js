@@ -73,7 +73,6 @@ class RescueStories extends Component {
           <br /> <br />
           <span className="attributes">Made by:</span>{" "}
           {eachStory.userId.username}
-          <br /> <br />
         </div>
       );
     });
@@ -115,7 +114,7 @@ class RescueStories extends Component {
           To add a story of your own, please login or signup using the nav bar
           above.
         </p>
-        <form onSubmit={this.handleSubmit} hidden={this.state.hidden}>
+        {/* <form onSubmit={this.handleSubmit} hidden={this.state.hidden}>
           <input
             onChange={this.handleChange}
             type="text"
@@ -150,8 +149,8 @@ class RescueStories extends Component {
           <br />
           <input type="file" name="imageUrl" onChange={this.handleFileChange} />
           <button>Submit</button>
-        </form>
-        <p className="cat-grid">{this.showAllStories()}</p>
+        </form> */}
+        <p className="stories">{this.showAllStories()}</p>
       </div>
     );
   }

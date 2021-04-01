@@ -128,7 +128,7 @@ h2 {
 .cat {
   flex: 0 0 200px;
   margin: 10px;
-  padding-top: 2rem;
+  padding: 2rem;
   border: 1px solid #6d7993;
   border-radius: 15px 15px;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
@@ -186,7 +186,7 @@ h2 {
 
 .stories {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   margin: 10px;
   padding-top: 2rem;
