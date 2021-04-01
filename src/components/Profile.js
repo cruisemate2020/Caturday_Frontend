@@ -90,9 +90,9 @@ class Profile extends Component {
       })
       .catch((err) => console.log(err));
     this.setState({
-      listOfStories: this.state.listOfStories.filter(
+      listOfStories: !!this.state.listOfStories && this.state.listOfStories.length > 0 ? this.state.listOfStories.filter(
         (story) => story._id !== id
-      ),
+      ) : [],
     });
   };
 
