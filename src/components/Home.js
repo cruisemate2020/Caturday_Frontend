@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <div className="content">
         <h1>Every Day is Caturday</h1>
-          <CarouselComponent />
+        <CarouselComponent />
         <p className="content-text">
           Studies have shown that cats have a calming effect on their owners,
           from the soothing action of petting to purring being an aid in falling
@@ -26,7 +26,9 @@ class Home extends Component {
           die of a heart attack or stroke than non-cat owners.
         </p>
         <h2>
-          <Link to="/petFinderSearch" className="adopt">Adopt a Cat Today!</Link>
+          <Link to="/petFinderSearch" className="adopt">
+            Click here to adopt a Cat Today!
+          </Link>
         </h2>
       </div>
     );
