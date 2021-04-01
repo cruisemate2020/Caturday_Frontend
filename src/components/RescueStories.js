@@ -18,7 +18,11 @@ class RescueStories extends Component {
   }
 
   componentDidMount() {
-    console.log("component mounting", process.env.REACT_APP_SERVER_URL);
+    // console.log("component mounting", process.env.REACT_APP_SERVER_URL);
+    this.setRescueStories();
+  }
+
+  setRescueStories() {
     axios
       .get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`)
       .then((response) => {
@@ -35,10 +39,9 @@ class RescueStories extends Component {
         `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
       )
       .then(() => {
-        console.log("deleted frontend");
+        this.setRescueStories();
       })
       .catch((err) => console.log(err));
-    this.props.history.push("/");
   };
 
   showAllStories = () => {
