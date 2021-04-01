@@ -89,7 +89,7 @@ class Profile extends Component {
         console.log("deleted frontend");
       })
       .catch((err) => console.log(err));
-    window.location.reload(false);
+    // window.location.reload(false);
   };
 
   editStory = (id) => {

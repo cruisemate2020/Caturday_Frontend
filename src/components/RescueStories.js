@@ -30,32 +30,32 @@ class RescueStories extends Component {
       });
   }
 
-  setRescueStories() {
-    axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`)
-      .then((response) => {
-        console.log({ response });
-        this.setState({
-          listOfStories: response.data,
-        });
-      });
-  }
+  // setRescueStories() {
+  //   axios
+  //     .get(`${process.env.REACT_APP_SERVER_URL}/api/rescue-story`)
+  //     .then((response) => {
+  //       console.log({ response });
+  //       this.setState({
+  //         listOfStories: response.data,
+  //       });
+  //     });
+  // }
 
-  deleteStory = (id) => {
-    axios
-      .delete(
-        `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
-      )
-      .then(() => {
-        // this.setRescueStories();
-        this.setState({
-          listOfStories: this.state.listOfStories.filter(
-            (story) => story._id !== id
-          ),
-        });
-      })
-      .catch((err) => console.log(err));
-  };
+  // deleteStory = (id) => {
+  //   axios
+  //     .delete(
+  //       `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
+  //     )
+  //     .then(() => {
+  //       // this.setRescueStories();
+  //       this.setState({
+  //         listOfStories: this.state.listOfStories.filter(
+  //           (story) => story._id !== id
+  //         ),
+  //       });
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
 
   showAllStories = () => {
     return this.state.listOfStories.map((eachStory) => {
