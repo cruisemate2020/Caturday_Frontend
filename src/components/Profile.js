@@ -87,13 +87,13 @@ class Profile extends Component {
       )
       .then(() => {
         console.log("deleted frontend");
+        this.setState({
+          listOfStories: !!this.state.listOfStories && this.state.listOfStories.length > 0 ? this.state.listOfStories.filter(
+            (story) => story._id !== id
+          ) : [],
+        });
       })
       .catch((err) => console.log(err));
-    this.setState({
-      listOfStories: !!this.state.listOfStories && this.state.listOfStories.length > 0 ? this.state.listOfStories.filter(
-        (story) => story._id !== id
-      ) : [],
-    });
   };
 
   editStory = (id) => {
