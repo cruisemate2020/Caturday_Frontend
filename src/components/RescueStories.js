@@ -111,8 +111,7 @@ class RescueStories extends Component {
           <button onClick={this.showForm}>Add story</button>
         )}
         <p className="notes">
-          To add a story of your own, please login or signup using the nav bar
-          above.
+          To add a story of your own, please login or signup.
         </p>
         {/* <form onSubmit={this.handleSubmit} hidden={this.state.hidden}>
           <input
