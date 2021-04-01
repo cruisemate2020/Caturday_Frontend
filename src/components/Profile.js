@@ -81,6 +81,7 @@ class Profile extends Component {
   };
 
   deleteStory = (id) => {
+    console.log("deleting story:", id)
     axios
       .delete(
         `${process.env.REACT_APP_SERVER_URL}/api/rescue-story/delete/${id}`
