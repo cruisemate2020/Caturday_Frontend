@@ -83,42 +83,6 @@ class RescueStories extends Component {
         <p className="notes">
           To add a story of your own, please login or signup.
         </p>
-        {/* <form onSubmit={this.handleSubmit} hidden={this.state.hidden}>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="name"
-            placeholder="Cat's Name"
-          />
-          <br />
-          <input
-            onChange={this.handleChange}
-            type="number"
-            name="age"
-            placeholder="Age"
-          />{" "}
-          <br />
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="breed"
-            placeholder="Breed"
-          />{" "}
-          <br />
-          <label>Tell your cat's story:</label>
-          <br />
-          <textarea
-            onChange={this.handleChange}
-            name="story"
-            cols="80"
-            rows="10"
-          ></textarea>
-          <br />
-          <label>Show off your beautiful Furbaby!</label>
-          <br />
-          <input type="file" name="imageUrl" onChange={this.handleFileChange} />
-          <button>Submit</button>
-        </form> */}
         <p className="stories">{this.showAllStories()}</p>
       </div>
     );

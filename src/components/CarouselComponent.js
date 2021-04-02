@@ -15,6 +15,9 @@ export default class CarouselComponent extends Component {
             width="600px"
           >
             <div className="carouselImgs">
+              <img src="../images/cat1a.jpeg" alt="Cat" />
+            </div>
+            <div className="carouselImgs">
               <img src="../images/cat1.jpeg" alt="Cat" />
             </div>
             <div className="carouselImgs">
