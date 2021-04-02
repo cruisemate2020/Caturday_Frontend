@@ -18,7 +18,7 @@ export default class CarouselComponent extends Component {
               <img src="../images/cat1.jpeg" alt="Cat" />
             </div>
             <div className="carouselImgs">
-              <img src="../images/cat7.jpg" alt="Cat" />
+              <img src="../images/cat7.png" alt="Cat" />
             </div>
             <div className="carouselImgs">
               <img src="../images/cat2.jpeg" alt="Cat" />
