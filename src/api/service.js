@@ -12,7 +12,6 @@ const errorHandler = (err) => {
 };
 
 export function handleUpload(theFile) {
-  console.log("file in service: ", theFile);
   return service
     .post("/upload", theFile)
     .then((res) => res.data)
@@ -20,7 +19,6 @@ export function handleUpload(theFile) {
 }
 
 export function saveNewThing(newThing) {
-  // console.log('new thing is: ', newThing)
   return service
     .post("/rescue-story", newThing)
     .then((res) => res.data)

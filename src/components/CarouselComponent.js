@@ -12,19 +12,31 @@ export default class CarouselComponent extends Component {
             autoPlay
             showThumbs={false}
             showStatus={false}
-            width="300px"
+            width="600px"
           >
             <div className="carouselImgs">
-              <img src="../images/Mao1a.jpg" alt="Mao" />
+              <img src="../images/cat1.jpeg" alt="Cat" />
             </div>
             <div className="carouselImgs">
-              <img src="../images/Mao2.jpg" alt="Mao" />
+              <img src="../images/cat2.jpeg" alt="Cat" />
             </div>
             <div className="carouselImgs">
-              <img src="../images/Mao3.jpg" alt="Mao" />
+              <img src="../images/cat3.jpeg" alt="Cat" />
             </div>
             <div className="carouselImgs">
-              <img src="../images/Mao4.jpg" alt="Mao" />
+              <img src="../images/cat4.jpeg" alt="Cat" />
+            </div>
+            <div className="carouselImgs">
+              <img src="../images/cat5.jpeg" alt="Cat" />
+            </div>
+            <div className="carouselImgs">
+              <img src="../images/cat6a.jpeg" alt="Cat" />
+            </div>
+            <div className="carouselImgs">
+              <img src="../images/cat8.jpeg" alt="Cat" />
+            </div>
+            <div className="carouselImgs">
+              <img src="../images/cat9.jpeg" alt="Cat" />
             </div>
           </Carousel>
         </div>

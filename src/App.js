@@ -45,7 +45,6 @@ class App extends Component {
   };
 
   logoutUser = () => {
-    console.log("appjs");
     this.service.logout().then(() => {
       this.setState({ loggedInUser: null });
     });

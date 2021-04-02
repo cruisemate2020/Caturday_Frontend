@@ -13,7 +13,7 @@ class Home extends Component {
   render() {
     return (
       <div className="content">
-        <h1>Every Day is Caturday</h1>
+        <h1>Everyday is Caturday</h1>
         <CarouselComponent />
         <p className="content-text">
           Studies have shown that cats have a calming effect on their owners,
