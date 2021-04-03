@@ -77,9 +77,6 @@ class RescueStories extends Component {
     return (
       <div>
         <h1>Rescue Stories</h1>
-        {this.state.loggedInUser && (
-          <button onClick={this.showForm}>Add story</button>
-        )}
         <p className="notes">
           To add a story of your own, please login or signup.
         </p>
